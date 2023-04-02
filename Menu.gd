@@ -7,7 +7,7 @@ enum PopupIds {
 
 var _last_mouse_pos
 
-onready var _pm = $PopupMenu
+@onready var _pm = $PopupMenu
 
 func _ready():
 	_pm.show
@@ -15,8 +15,8 @@ func _ready():
 	#_pm.connect("index_pressed", self,"_on_Popup_index_pressed")
 
 func _input(event):
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == BUTTON_RIGHT:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_RIGHT:
 		_last_mouse_pos = get_global_mouse_position()
-		_pm.popup(Rect2(_last_mouse_pos.x, _last_mouse_pos.y, _pm.rect_size.x, _pm.rect_size.y))
+		_pm.popup(Rect2(_last_mouse_pos.x, _last_mouse_pos.y, _pm.size.x, _pm.size.y))
 		print("test")
 		

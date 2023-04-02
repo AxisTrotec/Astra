@@ -1,0 +1,25 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1680030769
+default_env.tres::Environment::75910110824356236::1680030772::0::1::::<><>::
+Example.png::CompressedTexture2D::2888663173038410189::1680028171::1680028342::1::::<><>::
+icon.png::CompressedTexture2D::8535499234085369351::1680028171::1680028342::1::::<><>::
+Menu.gd::GDScript::-1::1680028336::0::1::::<>Node2D<>::
+::res://Art Assets/::1680028171
+::res://Art Assets/Assets/::1680028342
+HQ.png::CompressedTexture2D::4469970312210684557::1680028171::1680028342::1::::<><>::
+Moon.jpg::CompressedTexture2D::6404896338203834733::1680028171::1680028342::1::::<><>::
+moon_mask.png::CompressedTexture2D::547566789986426606::1680028171::1680028342::1::::<><>::
+::res://Art Assets/Sketches/::1680028342
+HQ.png::CompressedTexture2D::1387830914911406729::1680028171::1680028342::1::::<><>::
+::res://Entities/::1680030769
+character_body_2d.tscn::PackedScene::4961493059680623022::1680030772::0::1::::<><>::uid://b4xj01hkkhswb
+::res://Menus/::1680028171
+::res://Menus/Title/::1680029533
+Menu.gd::GDScript::-1::1680028336::0::1::::<>Control<>::
+Menu.tscn::PackedScene::6447422422779238574::1680029533::0::1::::<><>::res://Menus/Title/Menu.gd
+::res://Menus/WorldGenOptions/::1680029533
+WGOptionsMenu.gd::GDScript::-1::1680028336::0::1::::<>Control<>::
+WGOptionsMenu.tscn::PackedScene::7943034979862532276::1680029533::0::1::::<><>::res://Menus/WorldGenOptions/WGOptionsMenu.gd
+::res://Scenes/::1680029734
+World Generation.gd::GDScript::-1::1680030772::0::1::::<>Node2D<>::
+World Generation.tscn::PackedScene::1911123922367826596::1680029734::0::1::::<><>::res://Scenes/World Generation.gd<>uid://cxitybg54dp1v

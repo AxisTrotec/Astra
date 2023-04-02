@@ -1,0 +1,12 @@
+res://default_env.tres
+res://Menus/WorldGenOptions/WGOptionsMenu.tscn
+res://Scenes/World Generation.tscn
+res://Menus/Title/Menu.tscn
+res://Scenes/World Generation.gd
+res://Entities/HQ.tscn
+res://Scenes/TileMap.gd
+res://Entities/Camera2D.gd
+res://Scenes/Node2D.gd
+res://Scenes/Camera2D.gd
+res://Menus/Title/Menu.gd
+res://Menus/WorldGenOptions/WGOptionsMenu.gd
