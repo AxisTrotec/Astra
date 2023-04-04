@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk45i6gn62j54"]
+
+[ext_resource type="Script" path="res://Scenes/World Generation/Camera2D.gd" id="1_qtdvg"]
+[ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
+[ext_resource type="Script" path="res://Scenes/World Generation/TileMap.gd" id="3_80mny"]
+[ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
+texture = ExtResource("2_wjk1c")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_b4qke")
+
+[node name="World Generation" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("1_qtdvg")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+format = 2
+script = ExtResource("3_80mny")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_cvp68")]
+position = Vector2(0, -2)

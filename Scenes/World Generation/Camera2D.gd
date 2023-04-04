@@ -26,11 +26,16 @@ func _input(event):
 #
 	if event is InputEventKey:
 		if event.is_pressed():
+			#Movements
 			if Input.is_key_pressed(KEY_LEFT):
 				position.x -= 50
 			if Input.is_key_pressed(KEY_UP):
-				position.y += 50
+				position.y -= 50
 			if Input.is_key_pressed(KEY_RIGHT):
 				position.x += 50
 			if Input.is_key_pressed(KEY_DOWN):
-				position.y -= 50
+				position.y += 50
+			
+			#Menu
+			if Input.is_key_pressed(KEY_ESCAPE):
+				get_tree().change_scene_to_file("res://Menus/WorldGenOptions/WGOptionsMenu.tscn")

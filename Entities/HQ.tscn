@@ -9,9 +9,11 @@ size = Vector2(1812, 1812)
 position = Vector2(-4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(4, 1)
 shape = SubResource("RectangleShape2D_u6c3w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+top_level = true
 position = Vector2(-2, 0)
 texture = ExtResource("1_ldiky")
