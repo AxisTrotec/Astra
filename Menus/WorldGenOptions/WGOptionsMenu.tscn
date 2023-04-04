@@ -22,7 +22,12 @@ offset_top = -182.5
 offset_right = 163.0
 offset_bottom = 182.5
 
-[node name="OptionButton" type="OptionButton" parent="Panel"]
+[node name="world_type" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_right = 14.0
+offset_bottom = 20.0
+
+[node name="world_size" type="OptionButton" parent="Panel"]
 layout_mode = 0
 offset_left = 113.0
 offset_top = 55.5
@@ -37,5 +42,6 @@ offset_right = 217.0
 offset_bottom = 324.5
 text = "Create world"
 
-[connection signal="item_selected" from="Panel/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="item_selected" from="Panel/world_type" to="." method="_on_world_type_item_selected"]
+[connection signal="item_selected" from="Panel/world_size" to="." method="_on_OptionButton_item_selected"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

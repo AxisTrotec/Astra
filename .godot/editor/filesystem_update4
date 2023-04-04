@@ -1,9 +1,9 @@
 res://default_env.tres
-res://Scenes/World Generation.tscn
-res://Scenes/TileMap.gd
+res://Scenes/Counters/Counter.tscn
+res://Scenes/World Generation/World Generation.tscn
+res://Menus/OptionMenu/OptionMenu.tscn
+res://Menus/WorldGenOptions/WGOptionsMenu.gd
+res://global.gd
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
-res://Scenes/Camera2D.gd
-res://Scenes/World Generation/World Generation.tscn
-res://Scenes/Counters/Counter.tscn

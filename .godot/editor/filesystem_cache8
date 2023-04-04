@@ -1,32 +1,31 @@
-2a60927148abd1d33b818b535e306557
-::res://::1680585237
-default_env.tres::Environment::75910110824356236::1680585239::0::1::::<><>::
-Example.png::CompressedTexture2D::2888663173038410189::1680408204::1680408204::1::::<><>::
-global.gd::GDScript::-1::1680486232::0::1::::<>Node<>::
-icon.png::CompressedTexture2D::8535499234085369351::1680408204::1680408204::1::::<><>::
-Menu.gd::GDScript::-1::1680408204::0::1::::<>Node2D<>::
-::res://Art Assets/::1680408203
-::res://Art Assets/Assets/::1680487616
-HQ.png::CompressedTexture2D::4469970312210684557::1680408203::1680408203::1::::<><>::
-Moon.jpg::CompressedTexture2D::6404896338203834733::1680408203::1680408203::1::::<><>::
-Moon_1.jpg::CompressedTexture2D::2803849981471102241::1680487570::1680487616::1::::<><>::
-moon_mask.png::CompressedTexture2D::547566789986426606::1680408203::1680408203::1::::<><>::
-::res://Art Assets/Sketches/::1680408204
-HQ.png::CompressedTexture2D::1387830914911406729::1680408203::1680408203::1::::<><>::
-::res://Entities/::1680585179
-Camera2D.gd::GDScript::-1::1680408204::0::1::::<>RefCounted<>::
-HQ.tscn::PackedScene::4961493059680623022::1680585179::0::1::::<><>::uid://b4xj01hkkhswb
-::res://Menus/::1680408204
-::res://Menus/Title/::1680585179
-Menu.gd::GDScript::-1::1680408204::0::1::::<>Control<>::
-Menu.tscn::PackedScene::6447422422779238574::1680585179::0::1::::<><>::res://Menus/Title/Menu.gd
-::res://Menus/WorldGenOptions/::1680585179
-WGOptionsMenu.gd::GDScript::-1::1680486315::0::1::::<>Control<>::
-WGOptionsMenu.tscn::PackedScene::7943034979862532276::1680585179::0::1::::<><>::res://Menus/WorldGenOptions/WGOptionsMenu.gd
-::res://Scenes/::1680585237
-::res://Scenes/World Generation/::1680585237
-Camera2D.gd::GDScript::-1::1680583078::0::1::::<>Camera2D<>::
-Node2D.gd::GDScript::-1::1680408204::0::1::::<>Spatial<>::
-TileMap.gd::GDScript::-1::1680582975::0::1::::<>TileMap<>::
-World Generation.gd::GDScript::-1::1680492328::0::1::::<>Node2D<>::
-World Generation.tscn::PackedScene::3150013509201232037::1680585239::0::1::::<><>::res://Scenes/World Generation/Camera2D.gd<>uid://bf7g88qg60qsf<>res://Scenes/World Generation/TileMap.gd<>uid://ccxncict6cq11
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1680640694
+default_env.tres::Environment::75910110824356236::1680640694::0::1::::<><>::
+Example.png::CompressedTexture2D::2888663173038410189::1680028171::1680028342::1::::<><>::
+global.gd::GDScript::-1::1680639501::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::8535499234085369351::1680028171::1680028342::1::::<><>::
+Menu.gd::GDScript::-1::1680028336::0::1::::<>Node2D<>::
+::res://Art Assets/::1680028171
+::res://Art Assets/Assets/::1680639501
+HQ.png::CompressedTexture2D::4469970312210684557::1680028171::1680028342::1::::<><>::
+Moon.jpg::CompressedTexture2D::6404896338203834733::1680028171::1680028342::1::::<><>::
+Moon_1.jpg::CompressedTexture2D::2803849981471102241::1680639501::1680639501::1::::<><>::
+moon_mask.png::CompressedTexture2D::547566789986426606::1680028171::1680028342::1::::<><>::
+::res://Art Assets/Sketches/::1680028342
+HQ.png::CompressedTexture2D::1387830914911406729::1680028171::1680028342::1::::<><>::
+::res://Entities/::1680639501
+Camera2D.gd::GDScript::-1::1680121961::0::1::::<>RefCounted<>::
+HQ.tscn::PackedScene::4961493059680623022::1680639501::0::1::::<><>::uid://b4xj01hkkhswb
+::res://Menus/::1680028171
+::res://Menus/Title/::1680639501
+Menu.gd::GDScript::-1::1680123191::0::1::::<>Control<>::
+Menu.tscn::PackedScene::6447422422779238574::1680639501::0::1::::<><>::res://Menus/Title/Menu.gd
+::res://Menus/WorldGenOptions/::1680639501
+WGOptionsMenu.gd::GDScript::-1::1680639501::0::1::::<>Control<>::
+WGOptionsMenu.tscn::PackedScene::7943034979862532276::1680639501::0::1::::<><>::res://Menus/WorldGenOptions/WGOptionsMenu.gd
+::res://Scenes/::1680640038
+::res://Scenes/World Generation/::1680640694
+Camera2D.gd::GDScript::-1::1680639501::0::1::::<>Camera2D<>::
+TileMap.gd::GDScript::-1::1680639501::0::1::::<>TileMap<>::
+World Generation.gd::GDScript::-1::1680639501::0::1::::<>Node2D<>::
+World Generation.tscn::PackedScene::3150013509201232037::1680640694::0::1::::<><>::res://Scenes/World Generation/Camera2D.gd<>uid://bf7g88qg60qsf<>res://Scenes/World Generation/TileMap.gd<>uid://ccxncict6cq11
