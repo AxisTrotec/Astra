@@ -32,11 +32,12 @@ func _on_world_type_item_selected(index):
 	var current_selected = index
 	
 	if current_selected == 0:
-		Global.world_type= "Nero"
+		Global.world_type = "Nero"
 	elif current_selected == 1:
 		Global.world_type = "Gaia"
 
 
 func _on_button_pressed():
+	print("test")
 	Global.new_game = true
-	get_tree().change_scene_to_file("res://Scenes/World Generation.tscn")
+	get_tree().change_scene_to_file("res://Scenes/World Generation/World Generation.tscn")

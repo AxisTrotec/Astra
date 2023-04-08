@@ -7,3 +7,4 @@ res://global.gd
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
+res://Scenes/World Generation/Counter Bar.gd

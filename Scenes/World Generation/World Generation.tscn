@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bk45i6gn62j54"]
+[gd_scene load_steps=8 format=3 uid="uid://bk45i6gn62j54"]
 
 [ext_resource type="Script" path="res://Scenes/World Generation/Camera2D.gd" id="1_qtdvg"]
 [ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
 [ext_resource type="Script" path="res://Scenes/World Generation/TileMap.gd" id="3_80mny"]
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
+[ext_resource type="Script" path="res://Scenes/World Generation/Counter Bar.gd" id="5_upc62"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -36,5 +37,31 @@ position = Vector2(0, -2)
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+[node name="Counter Bar" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 2
+script = ExtResource("5_upc62")
+
+[node name="Energy" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "Energy"
+
+[node name="CurrentEnergy" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="Oxygen" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "Oxygen"
+
+[node name="CurrentOxygen" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "0"
+
+[node name="Food" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "Food"
+
+[node name="CurrentFood" type="Label" parent="PanelContainer/Counter Bar"]
+layout_mode = 2
+text = "0"

@@ -1,12 +1,14 @@
 extends Node
 
-var new_game = false
+var new_game
 
 #World Generation Options
 var world_type
 var world_size
 
 #Facilities
+var hq = 0
+
 #Productions
 var provision = []
 var SPP = []
@@ -38,39 +40,25 @@ var oxygen_rate
 
 func _ready():
 	#If new game, add facilities to variables
+	print(new_game)
 	if new_game:
-		provision.append({
-			id = provision.size(),
-			tier = 1
-		})
-		SPP.append({
-			id = SPP.size(),
-			tier = 1
-		})
-		LSS.append({
-			id = LSS.size(),
-			tier = 1
-		})
-		residences.append({
-			id = residences.size(),
-			tier = 1
-		})
-		medical.append({
-			id = medical.size(),
-			tier = 1
-		})
-		armoury.append({
-			id = armoury.size(),
-			tier = 1
-		})
-		hangar.append({
-			id = hangar.size(),
-			tier = 1
-		})
-		research.append({
-			id = research.size(),
-			tier = 1
-		})
-
+		hq = 1
+		
+		#Set energy to the default
+		energy_max = 5000
+		energy_current = 500
+		energy_rate = 13
+		
+#		#Set food to the default
+#		food_max = 50000
+#		food_current = 10
+#		food_rate = 10
+#
+#		#Set food to the default
+#		oxygen_max = 0
+#		oxygen_current = 0
+#		oxygen_rate = 0
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	pass
