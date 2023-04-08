@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
 [ext_resource type="Script" path="res://Scenes/World Generation/TileMap.gd" id="3_80mny"]
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
-[ext_resource type="Script" path="res://Scenes/World Generation/PanelContainer.gd" id="5_nd8a8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywh2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -18,10 +19,40 @@ sources/0 = SubResource("TileSetAtlasSource_b4qke")
 [node name="World Generation" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.2, 0.2)
+zoom = Vector2(0.1, 0.1)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("1_qtdvg")
+
+[node name="Counter Bar" type="HBoxContainer" parent="Camera2D"]
+offset_right = 201.0
+offset_bottom = 26.0
+
+[node name="Energy" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "Energy"
+label_settings = SubResource("LabelSettings_ywh2f")
+
+[node name="CurrentEnergy" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="Oxygen" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "Oxygen"
+
+[node name="CurrentOxygen" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "0"
+
+[node name="Food" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "Food"
+
+[node name="CurrentFood" type="Label" parent="Camera2D/Counter Bar"]
+layout_mode = 2
+text = "0"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("1")
@@ -30,39 +61,3 @@ script = ExtResource("3_80mny")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_cvp68")]
 position = Vector2(0, -2)
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = -3584.0
-offset_top = -3968.0
-offset_right = -3383.0
-offset_bottom = -3942.0
-scale = Vector2(10, 10)
-script = ExtResource("5_nd8a8")
-
-[node name="Counter Bar" type="HBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="Energy" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "Energy"
-
-[node name="CurrentEnergy" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "0"
-horizontal_alignment = 2
-
-[node name="Oxygen" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "Oxygen"
-
-[node name="CurrentOxygen" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "0"
-
-[node name="Food" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "Food"
-
-[node name="CurrentFood" type="Label" parent="PanelContainer/Counter Bar"]
-layout_mode = 2
-text = "0"

@@ -24,8 +24,10 @@ offset_bottom = 182.5
 
 [node name="world_type" type="OptionButton" parent="Panel"]
 layout_mode = 0
-offset_right = 14.0
-offset_bottom = 20.0
+offset_left = 115.0
+offset_top = 113.5
+offset_right = 129.0
+offset_bottom = 133.5
 
 [node name="world_size" type="OptionButton" parent="Panel"]
 layout_mode = 0

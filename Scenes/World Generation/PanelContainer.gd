@@ -1,8 +1,17 @@
 extends PanelContainer
 
+@onready var cur_energy = $"Counter Bar/CurrentEnergy"
+@onready var cur_oxygen = $"Counter Bar/CurrentOxygen"
+@onready var cur_food = $"Counter Bar/CurrentFood"
+
 func _ready():
-	#print(DisplayServer.screen_get_size())
-	#position = Vector2(-2560, -1440)
+	print(DisplayServer.screen_get_size())
+	$PanelContainer.position = Vector2(-500,-500)
+	
+	#Set counter variables
+	cur_energy.text = str(Global.energy_current)
+	cur_oxygen.text = str(Global.oxygen_current)
+	cur_food.text = str(Global.food_current)
 	
 	#Timer for counter updates with rates
 	var timer := Timer.new()
@@ -14,7 +23,8 @@ func _ready():
 		
 func _on_timer_timeout() -> void:
 	Global.energy_current += 13
-	$CurrentEnergy.text = String(Global.energy_current)
+	print(Global.energy_current)
+	cur_energy.text = str(Global.energy_current)
 	print("test")
 	print(Global.energy_current)
 	print(Global.energy_rate)

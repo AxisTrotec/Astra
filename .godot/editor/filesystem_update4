@@ -1,7 +1,10 @@
 res://default_env.tres
 res://Scenes/World Generation/World Generation.tscn
-res://Scenes/World Generation/PanelContainer.gd
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
 res://Menus/OptionMenu/OptionMenu.tscn
+res://Scenes/World Generation/PanelContainer.gd
+res://Menus/WorldGenOptions/WGOptionsMenu.gd
+res://Scenes/World Generation/TileMap.gd
+res://Scenes/World Generation/Camera2D.gd

@@ -51,12 +51,13 @@ func _on_button_pressed():
 		Global.energy_rate = 13
 		
 #		#Set food to the default
-#		food_max = 50000
-#		food_current = 10
-#		food_rate = 10
+		Global.food_max = 50000
+		Global.food_current = 10
+		Global.food_rate = 10
 #
 #		#Set food to the default
-#		oxygen_max = 0
-#		oxygen_current = 0
-#		oxygen_rate = 0
+		Global.oxygen_max = 0
+		Global.oxygen_current = 0
+		Global.oxygen_rate = 0
+		
 	get_tree().change_scene_to_file("res://Scenes/World Generation/World Generation.tscn")
