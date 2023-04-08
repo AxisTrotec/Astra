@@ -1,10 +1,7 @@
 res://default_env.tres
-res://Scenes/Counters/Counter.tscn
 res://Scenes/World Generation/World Generation.tscn
-res://Menus/OptionMenu/OptionMenu.tscn
-res://Menus/WorldGenOptions/WGOptionsMenu.gd
-res://global.gd
+res://Scenes/World Generation/PanelContainer.gd
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
-res://Scenes/World Generation/Counter Bar.gd
+res://Menus/OptionMenu/OptionMenu.tscn
