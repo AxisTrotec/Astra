@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk45i6gn62j54"]
+[gd_scene load_steps=9 format=3 uid="uid://bk45i6gn62j54"]
 
 [ext_resource type="Script" path="res://Scenes/World Generation/Camera2D.gd" id="1_qtdvg"]
 [ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
@@ -6,6 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ywh2f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ailey"]
+bg_color = Color(0.0862745, 0.662745, 0.811765, 0.498039)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -16,7 +28,7 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_b4qke")
 
-[node name="World Generation" type="Node2D"]
+[node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
@@ -54,10 +66,23 @@ text = "Food"
 layout_mode = 2
 text = "0"
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Facilities Panel" type="PanelContainer" parent="Camera2D"]
+offset_right = 201.0
+offset_bottom = 28.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ailey")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/Facilities Panel"]
+layout_mode = 2
+
+[node name="Info" type="Label" parent="Camera2D/Facilities Panel/HBoxContainer"]
+layout_mode = 2
+text = "Info
+"
+
+[node name="WorldGeneration" type="TileMap" parent="."]
 tile_set = SubResource("1")
 format = 2
 script = ExtResource("3_80mny")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("4_cvp68")]
+[node name="HQ" parent="." instance=ExtResource("4_cvp68")]
 position = Vector2(0, -2)
