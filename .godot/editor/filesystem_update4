@@ -1,12 +1,7 @@
 res://default_env.tres
-res://Scenes/World Generation/World Generation.tscn
-res://Scenes/World Generation/Camera2D.gd
+res://Entities/HQ.tscn
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
-res://Entities/HQ.tscn
+res://Scenes/World Generation/World Generation.tscn
 res://Menus/OptionMenu/OptionMenu.tscn
-res://Menus/Title/Menu.gd
 res://Scenes/InfoPanel/InfoPanel.tscn
-res://Scenes/World Generation/Energy.gd
-res://Scenes/World Generation/Oxygen.gd
-res://Scenes/World Generation/Food.gd
