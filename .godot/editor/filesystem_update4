@@ -6,3 +6,7 @@ res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
 res://Menus/OptionMenu/OptionMenu.tscn
 res://Menus/Title/Menu.gd
+res://Scenes/InfoPanel/InfoPanel.tscn
+res://Scenes/World Generation/Energy.gd
+res://Scenes/World Generation/Oxygen.gd
+res://Scenes/World Generation/Food.gd

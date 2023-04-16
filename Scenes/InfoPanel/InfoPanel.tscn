@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://ciwq1u7iktiiw"]
+
+[node name="InfoPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 31.0
+offset_bottom = 26.0
+scale = Vector2(0.99782, 1.004)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Wrapper" type="GridContainer" parent="."]
+layout_mode = 2
+offset_right = 279.0
+offset_bottom = 295.0
+columns = 2
+
+[node name="Headers" type="GridContainer" parent="Wrapper"]
+clip_contents = true
+layout_mode = 2
+
+[node name="FacilityID" type="Label" parent="Wrapper/Headers"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "HQ
+"
+
+[node name="FacilitiesHeader" type="Label" parent="Wrapper/Headers"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Facilities"
+
+[node name="Label2" type="Label" parent="Wrapper/Headers"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "tttt"
+
+[node name="Info" type="Label" parent="Wrapper/Headers"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Data" type="GridContainer" parent="Wrapper"]
+layout_mode = 2
+
+[node name="FacilityTier" type="Label" parent="Wrapper/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Tier 1"
+
+[node name="Facilities" type="Label" parent="Wrapper/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "- Provision Station - Level 1
+- LSS - Level 1
+- SPS - Level 1
+- Residences - Level 1
+- Medical Station - Level 1
+- Armoury - Level 1
+- Hangar - Level 1
+- Research Station - Level 1"
+
+[node name="Label4" type="Label" parent="Wrapper/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Info2" type="Label" parent="Wrapper/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Infoasdasdasdsad"
