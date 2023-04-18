@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk45i6gn62j54"]
+[gd_scene load_steps=11 format=3 uid="uid://bh0tlyncvy41i"]
 
-[ext_resource type="Script" path="res://Scenes/World Generation/Camera2D.gd" id="1_qtdvg"]
+[ext_resource type="Script" path="res://Scripts/World.gd" id="1_csb2j"]
+[ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ce041"]
 [ext_resource type="PackedScene" uid="uid://og4nfak4a8pw" path="res://Scenes/InfoPanel/counter_bar.tscn" id="2_esr7y"]
 [ext_resource type="PackedScene" uid="uid://ciwq1u7iktiiw" path="res://Scenes/InfoPanel/InfoPanel.tscn" id="2_pqhvx"]
 [ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
-[ext_resource type="Script" path="res://Scenes/World Generation/TileMap.gd" id="3_80mny"]
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
+[ext_resource type="PackedScene" uid="uid://dip1rvsm35qy2" path="res://Scenes/InfoPanel/build_panel.tscn" id="5_iogo4"]
+[ext_resource type="Script" path="res://Scripts/World Generation/TileMap.gd" id="7_dh57s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -17,12 +19,13 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_b4qke")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_csb2j")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-script = ExtResource("1_qtdvg")
+script = ExtResource("2_ce041")
 
 [node name="Counter Bar" parent="Camera2D" instance=ExtResource("2_esr7y")]
 
@@ -36,11 +39,15 @@ offset_right = 612.0
 offset_bottom = 661.0
 scale = Vector2(1, 1)
 
+[node name="BuildPanel" parent="Camera2D" instance=ExtResource("5_iogo4")]
+offset_top = -2.0
+offset_bottom = 38.0
+
 [node name="WorldGeneration" type="TileMap" parent="."]
 visible = false
 tile_set = SubResource("1")
 format = 2
-script = ExtResource("3_80mny")
+script = ExtResource("7_dh57s")
 
 [node name="HQ" parent="." instance=ExtResource("4_cvp68")]
 visible = false

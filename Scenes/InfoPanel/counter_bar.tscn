@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://og4nfak4a8pw"]
 
-[ext_resource type="Script" path="res://Scenes/World Generation/Energy.gd" id="1_0apbb"]
-[ext_resource type="Script" path="res://Scenes/World Generation/Oxygen.gd" id="2_211wg"]
-[ext_resource type="Script" path="res://Scenes/World Generation/Food.gd" id="3_1hsp7"]
+[ext_resource type="Script" path="res://Scripts/Counter Bar/Energy.gd" id="1_nwx57"]
+[ext_resource type="Script" path="res://Scripts/Counter Bar/Oxygen.gd" id="2_0txnl"]
+[ext_resource type="Script" path="res://Scripts/Counter Bar/Food.gd" id="3_8d30x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ywh2f"]
 
@@ -17,7 +17,7 @@ size_flags_horizontal = 3
 mouse_filter = 1
 text = "Energy"
 label_settings = SubResource("LabelSettings_ywh2f")
-script = ExtResource("1_0apbb")
+script = ExtResource("1_nwx57")
 
 [node name="CurrentEnergy" type="Label" parent="."]
 layout_mode = 2
@@ -31,7 +31,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 text = "Oxygen"
-script = ExtResource("2_211wg")
+script = ExtResource("2_0txnl")
 
 [node name="CurrentOxygen" type="Label" parent="."]
 layout_mode = 2
@@ -44,7 +44,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 text = "Food"
-script = ExtResource("3_1hsp7")
+script = ExtResource("3_8d30x")
 
 [node name="CurrentFood" type="Label" parent="."]
 layout_mode = 2

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlfwvjhvc3im3"]
+[gd_scene load_steps=2 format=3 uid="uid://bykrowv0pvb4m"]
 
-[ext_resource type="Script" path="res://Menus/WorldGenOptions/WGOptionsMenu.gd" id="1"]
+[ext_resource type="Script" path="res://Scripts/Menus/WGOptionsMenu.gd" id="1_lo8eg"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 1.00108)
-script = ExtResource("1")
+script = ExtResource("1_lo8eg")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

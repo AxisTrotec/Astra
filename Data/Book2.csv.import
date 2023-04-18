@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://n4mso7q8bkyi"
+
+[deps]
+
+files=["res://Data/Book2.Min Tier.translation", "res://Data/Book2.Max Tier.translation", "res://Data/Book2.Cost Metal.translation", "res://Data/Book2.Cost Energy.translation", "res://Data/Book2.Energy Rate.translation", "res://Data/Book2.Oxygen Rate.translation", "res://Data/Book2.Food Rate.translation", "res://Data/Book2.Bed.translation", "res://Data/Book2.Medical Bed.translation", "res://Data/Book2.Trainees.translation", "res://Data/Book2.Basic Train Time.translation", "res://Data/Book2.Standard Train Time.translation", "res://Data/Book2.Elite Train Time.translation", "res://Data/Book2.Elite Min Success Rate.translation", "res://Data/Book2.Elite Max Success Rate.translation"]
+
+source_file="res://Data/Book2.csv"
+dest_files=["res://Data/Book2.Min Tier.translation", "res://Data/Book2.Max Tier.translation", "res://Data/Book2.Cost Metal.translation", "res://Data/Book2.Cost Energy.translation", "res://Data/Book2.Energy Rate.translation", "res://Data/Book2.Oxygen Rate.translation", "res://Data/Book2.Food Rate.translation", "res://Data/Book2.Bed.translation", "res://Data/Book2.Medical Bed.translation", "res://Data/Book2.Trainees.translation", "res://Data/Book2.Basic Train Time.translation", "res://Data/Book2.Standard Train Time.translation", "res://Data/Book2.Elite Train Time.translation", "res://Data/Book2.Elite Min Success Rate.translation", "res://Data/Book2.Elite Max Success Rate.translation"]
+
+[params]
+
+compress=true
+delimiter=0
