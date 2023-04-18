@@ -1,0 +1,11 @@
+Type,Min Tier,Max Tier,Cost Metal,Cost Energy,Energy Rate,Oxygen Rate,Food Rate,Bed,Medical Bed,Trainees,Basic Train Time,Standard Train Time,Elite Train Time,Elite Min Success Rate,Elite Max Success Rate
+HQ,1,3,,,"156,312,624",,"138,222,277","100,300,500","20,35,50","50,75,100",,,,,
+Provision Station,1,3,,,,,,,,,,,,,
+Hydroponic Bay,1,3,,,,,"138,222,277",,,,,,,,
+Solar Power Station,1,3,,,"156,312,624",,,,,,,,,,
+Life Support System,1,3,,,,,,,,,,,,,
+Residences,1,3,,,,,,"100,300,500",,,,,,,
+Medical Station,1,3,,,,,,,"20,35,50",,,,,,
+Armoury,1,3,,,,,,,,"50,75,100","3,3,3","6,6,6","12,12,12",20,"50,75,100"
+Hangar,1,3,,,,,,,,,,,,,
+Research Station,1,3,,,,,,,,,,,,,

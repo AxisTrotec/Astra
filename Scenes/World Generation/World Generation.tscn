@@ -1,27 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk45i6gn62j54"]
+[gd_scene load_steps=9 format=3 uid="uid://bk45i6gn62j54"]
 
 [ext_resource type="Script" path="res://Scenes/World Generation/Camera2D.gd" id="1_qtdvg"]
-[ext_resource type="Script" path="res://Scenes/World Generation/Energy.gd" id="2_fx5fa"]
+[ext_resource type="PackedScene" uid="uid://og4nfak4a8pw" path="res://Scenes/InfoPanel/counter_bar.tscn" id="2_esr7y"]
 [ext_resource type="PackedScene" uid="uid://ciwq1u7iktiiw" path="res://Scenes/InfoPanel/InfoPanel.tscn" id="2_pqhvx"]
 [ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
 [ext_resource type="Script" path="res://Scenes/World Generation/TileMap.gd" id="3_80mny"]
-[ext_resource type="Script" path="res://Scenes/World Generation/Oxygen.gd" id="3_q3fdh"]
-[ext_resource type="Script" path="res://Scenes/World Generation/Food.gd" id="4_brdfq"]
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ywh2f"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ailey"]
-bg_color = Color(0.0862745, 0.662745, 0.811765, 0.498039)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 2
-corner_radius_top_right = 2
-corner_radius_bottom_right = 2
-corner_radius_bottom_left = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -40,80 +24,17 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 script = ExtResource("1_qtdvg")
 
-[node name="Counter Bar" type="HBoxContainer" parent="Camera2D"]
-offset_right = 1000.0
-offset_bottom = 31.0
-scale = Vector2(0.999111, 1)
+[node name="Counter Bar" parent="Camera2D" instance=ExtResource("2_esr7y")]
 
-[node name="Energy" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "Energy"
-label_settings = SubResource("LabelSettings_ywh2f")
-script = ExtResource("2_fx5fa")
-
-[node name="CurrentEnergy" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "0"
-horizontal_alignment = 2
-
-[node name="Oxygen" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "Oxygen"
-script = ExtResource("3_q3fdh")
-
-[node name="CurrentOxygen" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "0"
-
-[node name="Food" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "Food"
-script = ExtResource("4_brdfq")
-
-[node name="CurrentFood" type="Label" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 1
-text = "0"
-
-[node name="ResearchTab" type="Button" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "Research"
-
-[node name="MedicalTab" type="Button" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-text = "Medical"
-
-[node name="CrewTab" type="Button" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-text = "Crew"
-
-[node name="ResourcesTab" type="Button" parent="Camera2D/Counter Bar"]
-layout_mode = 2
-text = "Resources"
-
-[node name="Facilities Panel" type="PanelContainer" parent="Camera2D"]
-visible = false
-offset_right = 201.0
-offset_bottom = 28.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ailey")
-
-[node name="InfoPanel" parent="Camera2D/Facilities Panel" instance=ExtResource("2_pqhvx")]
-layout_mode = 2
+[node name="InfoPanel" parent="Camera2D" instance=ExtResource("2_pqhvx")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 402.0
+offset_top = 391.0
+offset_right = 612.0
+offset_bottom = 661.0
+scale = Vector2(1, 1)
 
 [node name="WorldGeneration" type="TileMap" parent="."]
 visible = false
@@ -124,7 +45,3 @@ script = ExtResource("3_80mny")
 [node name="HQ" parent="." instance=ExtResource("4_cvp68")]
 visible = false
 position = Vector2(0, -2)
-
-[connection signal="gui_input" from="Camera2D/Counter Bar/Energy" to="Camera2D/Counter Bar/Energy" method="_on_gui_input"]
-[connection signal="gui_input" from="Camera2D/Counter Bar/Oxygen" to="Camera2D/Counter Bar/Oxygen" method="_on_gui_input"]
-[connection signal="gui_input" from="Camera2D/Counter Bar/Food" to="Camera2D/Counter Bar/Food" method="_on_gui_input"]

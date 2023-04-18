@@ -1,11 +1,36 @@
-[gd_scene format=3 uid="uid://ciwq1u7iktiiw"]
+[gd_scene load_steps=5 format=3 uid="uid://ciwq1u7iktiiw"]
+
+[ext_resource type="PackedScene" uid="uid://6f2lfqxhruis" path="res://Scenes/InfoPanel/header.tscn" id="1_ejcdk"]
+[ext_resource type="PackedScene" uid="uid://biyb0toe50nmm" path="res://Scenes/InfoPanel/facilities.tscn" id="2_pf11u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1vtwa"]
+bg_color = Color(0, 0.666667, 0.815686, 0.509804)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr7x1"]
+bg_color = Color(0.129412, 0.145098, 0.176471, 1)
+draw_center = false
 
 [node name="InfoPanel" type="PanelContainer"]
-offset_right = 31.0
-offset_bottom = 26.0
+anchors_preset = -1
+anchor_right = 0.0348198
+anchor_bottom = 0.0520593
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 147.146
+offset_bottom = 218.776
 scale = Vector2(0.99782, 1.004)
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1vtwa")
+metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -16,71 +41,10 @@ layout_mode = 2
 [node name="Rows" type="VBoxContainer" parent="MarginContainer/Columns"]
 layout_mode = 2
 
-[node name="Header" type="PanelContainer" parent="MarginContainer/Columns/Rows"]
+[node name="Header" parent="MarginContainer/Columns/Rows" instance=ExtResource("1_ejcdk")]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sr7x1")
 
-[node name="Wrapper" type="GridContainer" parent="."]
-visible = false
+[node name="Facilities" parent="MarginContainer/Columns/Rows" instance=ExtResource("2_pf11u")]
 layout_mode = 2
-columns = 2
-
-[node name="Data" type="GridContainer" parent="Wrapper"]
-visible = false
-layout_mode = 2
-
-[node name="Label4" type="Label" parent="Wrapper/Data"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-
-[node name="Info2" type="Label" parent="Wrapper/Data"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "Infoasdasdasdsad"
-
-[node name="Headers" type="HBoxContainer" parent="."]
-layout_mode = 2
-
-[node name="FacilityID" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "HQ
-"
-
-[node name="FacilityTier" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "Tier 1"
-
-[node name="FacilitiesHeader" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "Facilities"
-
-[node name="Facilities" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "- Provision Station - Level 1
-- LSS - Level 1
-- SPS - Level 1
-- Residences - Level 1
-- Medical Station - Level 1
-- Armoury - Level 1
-- Hangar - Level 1
-- Research Station - Level 1"
-
-[node name="Label2" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "tttt"
-
-[node name="Info" type="Label" parent="Headers"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_sr7x1")

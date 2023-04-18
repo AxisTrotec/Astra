@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://biyb0toe50nmm"]
+
+[node name="Facilities" type="PanelContainer"]
+offset_top = 27.0
+offset_right = 33.0
+offset_bottom = 27.0
+
+[node name="MarginContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="FacilityHeader" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Facilities"
+
+[node name="FacilitiesList" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "- Provision Station - Level 1
+- LSS - Level 1
+- SPS - Level 1
+- Residences - Level 1
+- Medical Station - Level 1
+- Armoury - Level 1
+- Hangar - Level 1
+- Research Station - Level 1"
