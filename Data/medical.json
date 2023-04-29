@@ -1,0 +1,25 @@
+{
+  "medical": {
+    "1": {
+      "name": "Medical Bay",
+      "tier": "1",
+      "type": "medical",
+      "max": "20",
+      "effectiveness": "10%"
+    },
+    "2": {
+      "name": "Medical Bay",
+      "tier": "2",
+      "type": "medical",
+      "max": "35",
+      "effectiveness": "15%"
+    },
+    "3": {
+      "name": "Medical Bay",
+      "tier": "3",
+      "type": "medical",
+      "max": "50",
+      "effectiveness": "25%"
+    }
+  }
+}

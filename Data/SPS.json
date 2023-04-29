@@ -1,0 +1,25 @@
+{
+  "sps": {
+    "1": {
+      "name": "Solar Power Station",
+      "tier": "1",
+      "type": "energy",
+      "panels": "12",
+      "max": "5000"
+    },
+    "2": {
+      "name": "Solar Power Station",
+      "tier": "2",
+      "type": "energy",
+      "panels": "24",
+      "max": "25000"
+    },
+    "3": {
+      "name": "Solar Power Station",
+      "tier": "3",
+      "type": "energy",
+      "panels": "48",
+      "max": "50000"
+    }
+  }
+}

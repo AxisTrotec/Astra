@@ -1,0 +1,25 @@
+{
+  "research": {
+    "1": {
+      "name": "Research Station",
+      "tier": "1",
+      "type": "research",
+      "max": "10",
+      "effectiveness": "10%"
+    },
+    "2": {
+      "name": "Research Station",
+      "tier": "2",
+      "type": "research",
+      "max": "30",
+      "effectiveness": "15%"
+    },
+    "3": {
+      "name": "Research Station",
+      "tier": "3",
+      "type": "research",
+      "max": "60",
+      "effectiveness": "20%"
+    }
+  }
+}

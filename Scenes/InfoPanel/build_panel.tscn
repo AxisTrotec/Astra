@@ -1,5 +1,35 @@
-[gd_scene format=3 uid="uid://dip1rvsm35qy2"]
+[gd_scene load_steps=3 format=3 uid="uid://dip1rvsm35qy2"]
+
+[ext_resource type="Script" path="res://Scripts/Panels/build_panel.gd" id="1_lerrl"]
+[ext_resource type="PackedScene" uid="uid://vni0a6kjo5pu" path="res://Scenes/construct_btn.tscn" id="2_36l0t"]
 
 [node name="BuildPanel" type="PanelContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_lerrl")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ConstructBtn" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_36l0t")]
+layout_mode = 2
+
+[node name="ResearchBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Research"
+
+[node name="MedicalBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Medical"
+
+[node name="CrewBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Crew"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ConstructBtn" to="." method="_on_construct_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ResearchBtn" to="." method="_on_research_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MedicalBtn" to="." method="_on_medical_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CrewBtn" to="." method="_on_crew_btn_pressed"]

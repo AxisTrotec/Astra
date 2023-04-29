@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var cur_energy = $"Counter Bar/CurrentEnergy"
-@onready var cur_oxygen = $"Counter Bar/CurrentOxygen"
-@onready var cur_food = $"Counter Bar/CurrentFood"
+@onready var cur_energy = $"Camera2D/Counter Bar/CurrentEnergy"
+@onready var cur_oxygen = $"Camera2D/Counter Bar/CurrentOxygen"
+@onready var cur_food = $"Camera2D/Counter Bar/CurrentFood"
 
 func _ready():
 	#Set counter variables

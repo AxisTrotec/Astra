@@ -1,0 +1,22 @@
+{
+  "lss": {
+    "1": {
+      "name": "Life support System",
+      "tier": "1",
+      "type": "Oxygen",
+      "rate": "10"
+    },
+    "2": {
+      "name": "Life support System",
+      "tier": "2",
+      "type": "Oxygen",
+      "rate": "10"
+    },
+    "3": {
+      "name": "Life support System",
+      "tier": "3",
+      "type": "Oxygen",
+      "rate": "10"
+    }
+  }
+}

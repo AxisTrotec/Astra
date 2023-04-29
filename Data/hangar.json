@@ -1,0 +1,10 @@
+{
+  "hangar": {
+    "1": {
+      "name": "Provision Station",
+      "tier": "1",
+      "type": "food",
+      "rate": "10"
+    }
+  }
+}

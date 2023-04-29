@@ -1,11 +1,11 @@
-PanelContainer
-VBoxContainer
-MarginContainer
-CenterContainer
-Label
 Button
-Panel
 HBoxContainer
+VBoxContainer
+Label
+MarginContainer
+PanelContainer
+CenterContainer
+Panel
 CollisionShape2D
 Area2D
 Control

@@ -30,6 +30,7 @@ script = ExtResource("2_ce041")
 [node name="Counter Bar" parent="Camera2D" instance=ExtResource("2_esr7y")]
 
 [node name="InfoPanel" parent="Camera2D" instance=ExtResource("2_pqhvx")]
+visible = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -39,9 +40,12 @@ offset_right = 612.0
 offset_bottom = 661.0
 scale = Vector2(1, 1)
 
-[node name="BuildPanel" parent="Camera2D" instance=ExtResource("5_iogo4")]
-offset_top = -2.0
-offset_bottom = 38.0
+[node name="MainPanel" parent="Camera2D" instance=ExtResource("5_iogo4")]
+visible = false
+offset_left = 247.0
+offset_top = 399.0
+offset_right = 287.0
+offset_bottom = 439.0
 
 [node name="WorldGeneration" type="TileMap" parent="."]
 visible = false

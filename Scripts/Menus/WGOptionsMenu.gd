@@ -40,24 +40,5 @@ func _on_world_type_item_selected(index):
 
 func _on_button_pressed():
 	Global.new_game = true
-	
-	#If new game, add facilities to variables
-	if Global.new_game:
-		Global.hq = 1
-		
-		#Set energy to the default
-		Global.energy_max = 5000
-		Global.energy_current = 500
-		Global.energy_rate = 13
-		
-#		#Set food to the default
-		Global.food_max = 50000
-		Global.food_current = 10
-		Global.food_rate = 10
-#
-#		#Set food to the default
-		Global.oxygen_max = 0
-		Global.oxygen_current = 0
-		Global.oxygen_rate = 0
 		
 	get_tree().change_scene_to_file("res://Scenes/World Generation/World Generation.tscn")

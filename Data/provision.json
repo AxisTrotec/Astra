@@ -1,0 +1,23 @@
+{
+  "provision": 
+    {
+      "1": {
+        "name": "Provision Station",
+        "tier": "1",
+        "type": "food",
+        "rate": "10"
+      },
+      "2": {
+        "name": "Provision Station",
+        "tier": "2",
+        "type": "food",
+        "rate": "10"
+      },
+      "3": {
+        "name": "Provision Station",
+        "tier": "3",
+        "type": "food",
+        "rate": "10"
+      }
+    }
+}
