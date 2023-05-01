@@ -40,8 +40,7 @@ func initiate_build_mode(type):
 
 func update_tower_preview():
 	var mouse_position = get_global_mouse_position()
-	
-	get_node("Build_preview").update_tower_preview()
+	get_node("Build_preview").update_tower_preview(mouse_position, "ad54ff3c")
 	
 func _on_timer_timeout() -> void:
 	#Energy Rate
