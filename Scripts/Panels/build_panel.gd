@@ -7,26 +7,12 @@ extends PanelContainer
 @onready var militaryPanel = $MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/MilitaryPanel
 @onready var developmentPanel = $MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/DevelopmentPanel
 
-#Variables
-var build_mode = false
-var build_type
-
-func _ready():
-	for i in get_tree().get_nodes_in_group("facilities"):
-		i.button_down.connect(initiate_build_mode.bind(i.get_text()))
-		
 func _on_construct_btn_pressed():
 	constructPanel.visible = true
 	productionPanel.visible = true
-
-func initiate_build_mode(type):
-	build_type = type
-	build_mode = true
-	get_tree().get_root().get_node("res://Scenes/World Generation/World Generation.tscn").set_build_preview(type, get_global_mouse_position())
 	
 func _on_research_btn_pressed():
 	print("research")
-
 
 func _on_medical_btn_pressed():
 	print("medical")
