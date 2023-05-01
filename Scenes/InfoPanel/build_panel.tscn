@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dip1rvsm35qy2"]
+[gd_scene load_steps=2 format=3 uid="uid://dip1rvsm35qy2"]
 
 [ext_resource type="Script" path="res://Scripts/Panels/build_panel.gd" id="1_lerrl"]
-[ext_resource type="PackedScene" uid="uid://vni0a6kjo5pu" path="res://Scenes/construct_btn.tscn" id="2_36l0t"]
 
 [node name="BuildPanel" type="PanelContainer"]
 offset_right = 40.0
@@ -11,25 +10,156 @@ script = ExtResource("1_lerrl")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="ConstructBtn" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_36l0t")]
+[node name="Main" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="ResearchBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ConstructBtn" type="Button" parent="MarginContainer/HBoxContainer/Main"]
+layout_mode = 2
+text = "Construct"
+
+[node name="ResearchBtn" type="Button" parent="MarginContainer/HBoxContainer/Main"]
 layout_mode = 2
 text = "Research"
 
-[node name="MedicalBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="MedicalBtn" type="Button" parent="MarginContainer/HBoxContainer/Main"]
 layout_mode = 2
 text = "Medical"
 
-[node name="CrewBtn" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="CrewBtn" type="Button" parent="MarginContainer/HBoxContainer/Main"]
 layout_mode = 2
 text = "Crew"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ConstructBtn" to="." method="_on_construct_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ResearchBtn" to="." method="_on_research_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MedicalBtn" to="." method="_on_medical_btn_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CrewBtn" to="." method="_on_crew_btn_pressed"]
+[node name="ConstructPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel"]
+layout_mode = 2
+
+[node name="ConstructList" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Production" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList"]
+layout_mode = 2
+text = "Production"
+
+[node name="Hospitality" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList"]
+layout_mode = 2
+text = "Hospitality"
+
+[node name="Military" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList"]
+layout_mode = 2
+text = "Military"
+
+[node name="Development" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList"]
+layout_mode = 2
+text = "Development"
+
+[node name="ProductionPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel"]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="LSS" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Life Support System"
+
+[node name="SPS" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Solar Panel System"
+
+[node name="2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Provision" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer/2" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Provision Station"
+
+[node name="Hydroponic" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ProductionPanel/VBoxContainer/2" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hydroponic Bar"
+
+[node name="HospitalityPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/HospitalityPanel"]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/HospitalityPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Residences" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/HospitalityPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Residences"
+
+[node name="Medical" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/HospitalityPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Medical Bay"
+
+[node name="MilitaryPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/MilitaryPanel"]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/MilitaryPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Armoury" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/MilitaryPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Armoury"
+
+[node name="Hangar" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/MilitaryPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hangar"
+
+[node name="DevelopmentPanel" type="PanelContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/DevelopmentPanel"]
+layout_mode = 2
+
+[node name="1" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/DevelopmentPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Research" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/DevelopmentPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Research Station"
+
+[node name="Engineering" type="Button" parent="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/DevelopmentPanel/VBoxContainer/1" groups=["facilities"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Engineering Station"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Main/ConstructBtn" to="." method="_on_construct_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Main/ResearchBtn" to="." method="_on_research_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Main/MedicalBtn" to="." method="_on_medical_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Main/CrewBtn" to="." method="_on_crew_btn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList/Production" to="." method="_on_production_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList/Hospitality" to="." method="_on_hospitality_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList/Military" to="." method="_on_military_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ConstructPanel/VBoxContainer2/ConstructList/Development" to="." method="_on_development_pressed"]

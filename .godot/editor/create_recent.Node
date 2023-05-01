@@ -1,9 +1,10 @@
+CanvasLayer
 Button
+Label
 HBoxContainer
 VBoxContainer
-Label
-MarginContainer
 PanelContainer
+MarginContainer
 CenterContainer
 Panel
 CollisionShape2D
@@ -14,7 +15,6 @@ NinePatchRect
 RichTextLabel
 Node2D
 SubViewport
-CanvasLayer
 ItemList
 OptionButton
 Camera2D

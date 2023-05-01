@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh0tlyncvy41i"]
+[gd_scene load_steps=12 format=3 uid="uid://bh0tlyncvy41i"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_csb2j"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ce041"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
 [ext_resource type="PackedScene" uid="uid://dip1rvsm35qy2" path="res://Scenes/InfoPanel/build_panel.tscn" id="5_iogo4"]
 [ext_resource type="Script" path="res://Scripts/World Generation/TileMap.gd" id="7_dh57s"]
+[ext_resource type="Script" path="res://Scripts/Build_preview.gd" id="9_arw4f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
 texture = ExtResource("2_wjk1c")
@@ -28,6 +29,7 @@ position_smoothing_speed = 10.0
 script = ExtResource("2_ce041")
 
 [node name="Counter Bar" parent="Camera2D" instance=ExtResource("2_esr7y")]
+visible = false
 
 [node name="InfoPanel" parent="Camera2D" instance=ExtResource("2_pqhvx")]
 visible = false
@@ -56,3 +58,6 @@ script = ExtResource("7_dh57s")
 [node name="HQ" parent="." instance=ExtResource("4_cvp68")]
 visible = false
 position = Vector2(0, -2)
+
+[node name="Build_preview" type="CanvasLayer" parent="."]
+script = ExtResource("9_arw4f")
