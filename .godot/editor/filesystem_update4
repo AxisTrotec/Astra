@@ -1,9 +1,8 @@
 res://default_env.tres
-res://Scenes/World Generation/World Generation.tscn
-res://Scripts/Build_preview.gd
 res://Menus/WorldGenOptions/WGOptionsMenu.tscn
 res://Menus/Title/Menu.tscn
 res://Entities/HQ.tscn
+res://Scenes/World Generation/World Generation.tscn
 res://Menus/OptionMenu/OptionMenu.tscn
 res://Scenes/InfoPanel/InfoPanel.tscn
 res://Scenes/InfoPanel/header.tscn
@@ -11,3 +10,5 @@ res://Scenes/InfoPanel/facilities.tscn
 res://Scenes/InfoPanel/counter_bar.tscn
 res://Scenes/InfoPanel/build_panel.tscn
 res://Scripts/World.gd
+res://Scripts/Build_preview.gd
+res://Scripts/Camera2D.gd

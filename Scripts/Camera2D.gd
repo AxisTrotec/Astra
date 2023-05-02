@@ -32,11 +32,9 @@ func _input(event):
 			if Input.is_key_pressed(KEY_ESCAPE):
 				get_tree().change_scene_to_file("res://Menus/WorldGenOptions/WGOptionsMenu.tscn")
 				
-#	if event is InputEventMouseButton:
-#		if event.is_pressed():
-#			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-#				if buildPanelFlag:
-#					buildPanel.visible = false
+	if event is InputEventMouseButton:
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+			build_panel()
 
 func build_panel():
 	buildPanelFlag = true

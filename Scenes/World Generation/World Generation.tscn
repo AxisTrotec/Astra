@@ -50,13 +50,11 @@ offset_right = 287.0
 offset_bottom = 439.0
 
 [node name="WorldGeneration" type="TileMap" parent="."]
-visible = false
 tile_set = SubResource("1")
 format = 2
 script = ExtResource("7_dh57s")
 
 [node name="HQ" parent="." instance=ExtResource("4_cvp68")]
-visible = false
 position = Vector2(0, -2)
 
 [node name="Build_preview" type="CanvasLayer" parent="."]

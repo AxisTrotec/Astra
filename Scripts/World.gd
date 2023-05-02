@@ -10,6 +10,8 @@ var build_valid = false
 var build_location
 var build_type
 
+var map_node
+
 func _ready():
 	#Set counter variables
 	cur_energy.text = str(Global.energy_current)
@@ -25,6 +27,7 @@ func _ready():
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
 	
+	map_node = get_node("WorldGeneration")
 	for i in get_tree().get_nodes_in_group("facilities"):
 		i.button_down.connect(initiate_build_mode.bind(i.get_text()))
 
@@ -41,7 +44,15 @@ func initiate_build_mode(type):
 func update_tower_preview():
 	var mouse_position = get_global_mouse_position()
 	get_node("Build_preview").update_tower_preview(mouse_position, "ad54ff3c")
-	
+	build_valid = true
+	build_location = mouse_position
+
+func verify_and_build():
+	if build_valid:
+		var new_facility = load("res://Entities/HQ.tscn").instantiate()
+		new_facility.position = build_location
+		map_node.get_node()
+
 func _on_timer_timeout() -> void:
 	#Energy Rate
 	Global.energy_current += 13
