@@ -29,7 +29,7 @@ func _ready():
 	
 	map_node = get_node("WorldGeneration")
 	for i in get_tree().get_nodes_in_group("facilities"):
-		i.button_down.connect(initiate_build_mode.bind(i.get_text()))
+		i.pressed.connect(initiate_build_mode.bind(i.get_text()))
 
 func _process(delta):
 	if build_mode:
@@ -51,7 +51,7 @@ func verify_and_build():
 	if build_valid:
 		var new_facility = load("res://Entities/HQ.tscn").instantiate()
 		new_facility.position = build_location
-		map_node.get_node()
+		map_node.get_node("Facilities").add_child(new_facility, true)
 
 func _on_timer_timeout() -> void:
 	#Energy Rate

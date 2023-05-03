@@ -4,7 +4,7 @@ extends TileMap
 
 @export var width = 64
 @export var height = 64
-@onready var HQ = get_parent().get_child(2)
+@onready var HQ = $"Facilities/HQ"
 var temperature = FastNoiseLite.new()
 var altitude = FastNoiseLite.new()
 var moisture = FastNoiseLite.new()

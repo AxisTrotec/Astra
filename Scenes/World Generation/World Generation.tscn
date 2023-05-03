@@ -1,23 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bh0tlyncvy41i"]
+[gd_scene load_steps=8 format=3 uid="uid://bh0tlyncvy41i"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_csb2j"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ce041"]
 [ext_resource type="PackedScene" uid="uid://og4nfak4a8pw" path="res://Scenes/InfoPanel/counter_bar.tscn" id="2_esr7y"]
 [ext_resource type="PackedScene" uid="uid://ciwq1u7iktiiw" path="res://Scenes/InfoPanel/InfoPanel.tscn" id="2_pqhvx"]
-[ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="2_wjk1c"]
-[ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="4_cvp68"]
 [ext_resource type="PackedScene" uid="uid://dip1rvsm35qy2" path="res://Scenes/InfoPanel/build_panel.tscn" id="5_iogo4"]
-[ext_resource type="Script" path="res://Scripts/World Generation/TileMap.gd" id="7_dh57s"]
+[ext_resource type="PackedScene" uid="uid://barbc8iykmbx4" path="res://Scenes/World Generation/world_generation.tscn" id="6_dedit"]
 [ext_resource type="Script" path="res://Scripts/Build_preview.gd" id="9_arw4f"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
-texture = ExtResource("2_wjk1c")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="1"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_b4qke")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_csb2j")
@@ -49,13 +38,7 @@ offset_top = 399.0
 offset_right = 287.0
 offset_bottom = 439.0
 
-[node name="WorldGeneration" type="TileMap" parent="."]
-tile_set = SubResource("1")
-format = 2
-script = ExtResource("7_dh57s")
-
-[node name="HQ" parent="." instance=ExtResource("4_cvp68")]
-position = Vector2(0, -2)
+[node name="WorldGeneration" parent="." instance=ExtResource("6_dedit")]
 
 [node name="Build_preview" type="CanvasLayer" parent="."]
 script = ExtResource("9_arw4f")
