@@ -1,21 +1,20 @@
-extends CanvasLayer
+extends TileMap
 
 var preloadSprite = preload("res://Entities/HQ.tscn")
 
 func set_build_preview(type, mouse_pos):
 	var facility = preloadSprite.instantiate()
 	
-	get_child(0).position = Vector2(mouse_pos.x, mouse_pos.y)
-	
 #	facility.set_name("DragPreview")
-##	drag.modulate = Color("54ffc")
-#
-#	var control = Control.new()
-#	control.add_child(facility, true)
-#	control.position = mouse_pos
-#	control.set_name("Preview")
-#	add_child(control, true)
-#	move_child(get_node("Preview"), 0)
+#	drag.modulate = Color("54ffc")
+	
+	var area2d = Area2D.new()
+	area2d.add_child(facility, true)
+	area2d.set_name("Preview")
+	add_child(area2d)
+	get_node("Preview").position = mouse_pos
+	print(get_node("Preview").position)
+	move_child(get_node("Preview"), 0)
 	
 func update_tower_preview(new_pos, color):
 	pass

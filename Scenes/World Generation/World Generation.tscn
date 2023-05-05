@@ -40,5 +40,6 @@ offset_bottom = 439.0
 
 [node name="WorldGeneration" parent="." instance=ExtResource("6_dedit")]
 
-[node name="Build_preview" type="CanvasLayer" parent="."]
+[node name="Build_preview" type="TileMap" parent="."]
+format = 2
 script = ExtResource("9_arw4f")
