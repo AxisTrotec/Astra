@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 func _ready():
 	
@@ -27,3 +27,9 @@ func _input_event(viewport, event, shape_idx):
 
 func on_click():
 	print("Click")
+
+func _on_area_2d_area_entered(area):
+	Global.build_valid = false
+	
+func _on_area_2d_area_exited(area):
+	Global.build_valid = true

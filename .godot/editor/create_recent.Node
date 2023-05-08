@@ -1,6 +1,10 @@
-TileMap
+Area2D
+CollisionShape2D
+StaticBody2D
+AnimatableBody2D
 Node2D
 CanvasLayer
+TileMap
 Button
 Label
 HBoxContainer
@@ -9,8 +13,6 @@ PanelContainer
 MarginContainer
 CenterContainer
 Panel
-CollisionShape2D
-Area2D
 Control
 GridContainer
 NinePatchRect

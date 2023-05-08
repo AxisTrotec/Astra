@@ -40,6 +40,7 @@ offset_bottom = 439.0
 
 [node name="WorldGeneration" parent="." instance=ExtResource("6_dedit")]
 
-[node name="Build_preview" type="TileMap" parent="."]
-format = 2
+[node name="Build_preview" type="CanvasLayer" parent="."]
+transform = Transform2D(1, 2.08165e-13, -2.08165e-13, 1, 0, 0)
+follow_viewport_enabled = true
 script = ExtResource("9_arw4f")

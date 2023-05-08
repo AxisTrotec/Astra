@@ -8,6 +8,9 @@ var world_size
 
 var list = ["provision", "sps", "lss", "residences", "medical", "armoury", "hangar", "research"]
 
+#Build verification
+var build_valid = true
+
 #Facilities
 var hq = 0
 

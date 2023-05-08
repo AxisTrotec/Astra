@@ -4,12 +4,13 @@ extends Node2D
 @onready var cur_oxygen = $"Camera2D/Counter Bar/CurrentOxygen"
 @onready var cur_food = $"Camera2D/Counter Bar/CurrentFood"
 
-#Variables
+@onready var facilities = $WorldGeneration/Facilities
+
+#List of variables -----
 var build_mode = false
 var build_valid = false
 var build_location
 var build_type
-
 var map_node
 
 func _ready():
@@ -43,7 +44,16 @@ func initiate_build_mode(type):
 
 func update_tower_preview():
 	var mouse_position = get_global_mouse_position()
-	get_node("Build_preview").update_tower_preview(mouse_position, "ad54ff3c")
+	
+	var color
+	
+	if Global.build_valid:
+		color = "#30fc03"
+	else:
+		color = "#fc0313"
+		
+	get_node("Build_preview").update_tower_preview(mouse_position, color)
+	
 	build_valid = true
 	build_location = mouse_position
 
