@@ -1,16 +1,9 @@
 extends Camera2D
 
-#Panels
-@onready var panel = $"Counter Bar"
-@onready var buildPanel = $"MainPanel"
+@onready var buildPanel = $MainPanel
 
+var zoomSpeed = 0.05
 var buildPanelFlag = false
-
-func _ready():
-	#Set panels on top-left corner of the screen
-	panel.set_position(Vector2(-18000,-10500))
-	panel.scale.x = 20
-	panel.scale.y = 20
 
 func _input(event):
 	if event is InputEventKey:
@@ -26,19 +19,24 @@ func _input(event):
 				position.y += 50
 			
 			if Input.is_key_pressed(KEY_CTRL):
-				build_panel()
+				print(get_global_mouse_position())
+				print((get_global_mouse_position() + get_global_mouse_position()))
 			
-			#Menu
+			#Menus
 			if Input.is_key_pressed(KEY_ESCAPE):
 				get_tree().change_scene_to_file("res://Menus/WorldGenOptions/WGOptionsMenu.tscn")
 				
 	if event is InputEventMouseButton:
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-			build_panel()
+			build_panel(get_global_mouse_position())
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_UP):
+			zoom.x += zoomSpeed
+			zoom.y += zoomSpeed
+		if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_DOWN):
+			zoom.x -= zoomSpeed
+			zoom.y -= zoomSpeed
 
-func build_panel():
+func build_panel(mouse_pos):
 	buildPanelFlag = true
-	buildPanel.set_position(Vector2(get_global_mouse_position().x, get_global_mouse_position().y))
-	buildPanel.scale.x = 20
-	buildPanel.scale.y = 20
+	buildPanel.set_position(mouse_pos)
 	buildPanel.visible = true

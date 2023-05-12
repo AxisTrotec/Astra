@@ -21,4 +21,3 @@ script = ExtResource("2_m8k84")
 [node name="Facilities" type="Node2D" parent="."]
 
 [node name="HQ" parent="Facilities" instance=ExtResource("3_nidvb")]
-position = Vector2(0, -2)

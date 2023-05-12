@@ -1,9 +1,11 @@
-Area2D
+CanvasLayer
+ColorRect
+CanvasModulate
 CollisionShape2D
+Area2D
 StaticBody2D
 AnimatableBody2D
 Node2D
-CanvasLayer
 TileMap
 Button
 Label

@@ -1,5 +1,7 @@
 extends Node2D
 
+var innerBuildValid = true
+
 func _ready():
 	
 	#If new game, add facilities to variables
@@ -20,7 +22,7 @@ func _ready():
 		Global.oxygen_max = 0
 		Global.oxygen_current = 0
 		Global.oxygen_rate = 0
-		
+
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 		self.on_click()
@@ -28,8 +30,17 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	print("Click")
 
-func _on_area_2d_area_entered(area):
-	Global.build_valid = false
+func _on_inner_area_2d_area_entered(area):
+	innerBuildValid = false
+
+func _on_inner_area_2d_area_exited(area):
+	innerBuildValid = true
 	
-func _on_area_2d_area_exited(area):
-	Global.build_valid = true
+func _on_outer_area_2d_area_entered(area):
+	if !innerBuildValid:
+		Global.build_valid = false
+	else:
+		Global.build_valid = true
+
+func _on_outer_area_2d_area_exited(area):
+	Global.build_valid = false

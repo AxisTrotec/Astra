@@ -1,62 +1,63 @@
-fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1683345934
-default_env.tres::Environment::75910110824356236::1683267210::0::1::::<><>::
-Example.png::CompressedTexture2D::2888663173038410189::1680028171::1680028342::1::::<><>::
-global.gd::GDScript::-1::1682243027::0::1::::<>Node<>::
-icon.png::CompressedTexture2D::8535499234085369351::1680028171::1680028342::1::::<><>::
-Menu.gd::GDScript::-1::1680028336::0::1::::<>Node2D<>::
-::res://Art Assets/::1680028171
-::res://Art Assets/Assets/::1680639501
-HQ.png::CompressedTexture2D::4469970312210684557::1680028171::1680028342::1::::<><>::
-Moon.jpg::CompressedTexture2D::6404896338203834733::1680028171::1680028342::1::::<><>::
-Moon_1.jpg::CompressedTexture2D::2803849981471102241::1680639501::1680639501::1::::<><>::
-moon_mask.png::CompressedTexture2D::547566789986426606::1680028171::1680028342::1::::<><>::
-::res://Art Assets/Sketches/::1680028342
-HQ.png::CompressedTexture2D::1387830914911406729::1680028171::1680028342::1::::<><>::
-::res://Data/::1682349827
-armoury.json::JSON::-1::1682349827::0::1::::<><>::
-hangar.json::JSON::-1::1682242977::0::1::::<><>::
-list.txt::TextFile::-1::1682234276::0::1::::<><>::
-LSS.json::JSON::-1::1682242948::0::1::::<><>::
-medical.json::JSON::-1::1682242968::0::1::::<><>::
-provision.json::JSON::-1::1682233924::0::1::::<><>::
-research.json::JSON::-1::1682242986::0::1::::<><>::
-residences.json::JSON::-1::1682242959::0::1::::<><>::
-SPS.json::JSON::-1::1682242938::0::1::::<><>::
-::res://Entities/::1683267210
-Camera2D.gd::GDScript::-1::1680121961::0::1::::<>RefCounted<>::
-HQ.gd::GDScript::-1::1682305545::0::1::::<>Area2D<>::
-HQ.tscn::PackedScene::4961493059680623022::1683267210::0::1::::<><>::uid://b4xj01hkkhswb<>res://Entities/HQ.gd
-::res://Menus/::1680641040
-::res://Menus/OptionMenu/::1683267210
-OptionMenu.tscn::PackedScene::8267721410576233976::1683267210::0::1::::<><>::
-::res://Menus/Title/::1683267210
-Menu.gd::GDScript::-1::1681252081::0::1::::<>Control<>::
-Menu.tscn::PackedScene::6447422422779238574::1683267210::0::1::::<><>::res://Menus/Title/Menu.gd
-::res://Menus/WorldGenOptions/::1683267210
-WGOptionsMenu.tscn::PackedScene::4092655087649528546::1683267210::0::1::::<><>::res://Scripts/Menus/WGOptionsMenu.gd
-::res://Scenes/::1682785004
-::res://Scenes/InfoPanel/::1683267210
-build_panel.tscn::PackedScene::7753348598183443643::1683267210::0::1::::<><>::res://Scripts/Panels/build_panel.gd
-counter_bar.tscn::PackedScene::996814348677700520::1683267210::0::1::::<><>::res://Scripts/Counter Bar/Energy.gd<>res://Scripts/Counter Bar/Oxygen.gd<>res://Scripts/Counter Bar/Food.gd
-facilities.tscn::PackedScene::2997582880528928000::1683267210::0::1::::<><>::
-header.tscn::PackedScene::2187835332475633226::1683267210::0::1::::<><>::
-InfoPanel.tscn::PackedScene::5380787429883914238::1683267210::0::1::::<><>::uid://6f2lfqxhruis<>uid://biyb0toe50nmm
-::res://Scenes/World Generation/::1683267210
-World Generation.tscn::PackedScene::2930526580369111296::1683267210::0::1::::<><>::res://Scripts/World.gd<>res://Scripts/Camera2D.gd<>uid://og4nfak4a8pw<>uid://ciwq1u7iktiiw<>uid://dip1rvsm35qy2<>uid://barbc8iykmbx4<>res://Scripts/Build_preview.gd
-world_generation.tscn::PackedScene::2421581140825970735::1683267210::0::1::::<><>::uid://bf7g88qg60qsf<>res://Scripts/World Generation/TileMap.gd<>uid://ccxncict6cq11
-::res://Scripts/::1683255037
-Build_preview.gd::GDScript::-1::1683255037::0::1::::<>TileMap<>::
-Camera2D.gd::GDScript::-1::1683153313::0::1::::<>Camera2D<>::
-World.gd::GDScript::-1::1683153141::0::1::::<>Node2D<>::
-::res://Scripts/Counter Bar/::1681849901
-Energy.gd::GDScript::-1::1681419797::0::1::::<>Label<>::
-Food.gd::GDScript::-1::1681419821::0::1::::<>Label<>::
-Oxygen.gd::GDScript::-1::1681419790::0::1::::<>Label<>::
-::res://Scripts/Menus/::1682304356
-WGOptionsMenu.gd::GDScript::-1::1682304356::0::1::::<>Control<>::
-::res://Scripts/Panels/::1682967638
-build_panel.gd::GDScript::-1::1682967638::0::1::::<>PanelContainer<>::
-construct_btn.gd::GDScript::-1::1682730536::0::1::::<>Button<>::
-::res://Scripts/World Generation/::1683152650
-TileMap.gd::GDScript::-1::1683152650::0::1::::<>TileMap<>::
+2a60927148abd1d33b818b535e306557
+::res://::1683871529
+default_env.tres::Environment::75910110824356236::1683791079::0::1::::<><>::
+Example.png::CompressedTexture2D::2888663173038410189::1680408204::1680408204::1::::<><>::
+global.gd::GDScript::-1::1683787462::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::8535499234085369351::1680408204::1680408204::1::::<><>::
+Menu.gd::GDScript::-1::1680408204::0::1::::<>Node2D<>::
+::res://Art Assets/::1683643557
+::res://Art Assets/Assets/::1680487616
+HQ.png::CompressedTexture2D::4469970312210684557::1680408203::1680408203::1::::<><>::
+Moon.jpg::CompressedTexture2D::6404896338203834733::1680408203::1680408203::1::::<><>::
+Moon_1.jpg::CompressedTexture2D::2803849981471102241::1680487570::1680487616::1::::<><>::
+moon_mask.png::CompressedTexture2D::547566789986426606::1680408203::1680408203::1::::<><>::
+::res://Art Assets/Sketches/::1680408204
+HQ.png::CompressedTexture2D::1387830914911406729::1680408203::1680408203::1::::<><>::
+::res://Data/::1682914735
+armoury.json::JSON::-1::1682914735::0::1::::<><>::
+hangar.json::JSON::-1::1682914735::0::1::::<><>::
+list.txt::TextFile::-1::1682914735::0::1::::<><>::
+LSS.json::JSON::-1::1682914735::0::1::::<><>::
+medical.json::JSON::-1::1682914735::0::1::::<><>::
+provision.json::JSON::-1::1682914735::0::1::::<><>::
+research.json::JSON::-1::1682914735::0::1::::<><>::
+residences.json::JSON::-1::1682914735::0::1::::<><>::
+SPS.json::JSON::-1::1682914735::0::1::::<><>::
+::res://Entities/::1683791079
+Camera2D.gd::GDScript::-1::1680408204::0::1::::<>RefCounted<>::
+HQ.gd::GDScript::-1::1683782248::0::1::::<>Node2D<>::
+HQ.tscn::PackedScene::4961493059680623022::1683791079::0::1::::<><>::uid://b4xj01hkkhswb<>res://Entities/HQ.gd
+::res://Menus/::1680948942
+::res://Menus/OptionMenu/::1683791079
+OptionMenu.tscn::PackedScene::8267721410576233976::1683791079::0::1::::<><>::
+::res://Menus/Title/::1683791079
+Menu.gd::GDScript::-1::1681643474::0::1::::<>Control<>::
+Menu.tscn::PackedScene::6447422422779238574::1683791079::0::1::::<><>::res://Menus/Title/Menu.gd
+::res://Menus/WorldGenOptions/::1683791079
+WGOptionsMenu.tscn::PackedScene::4092655087649528546::1683791079::0::1::::<><>::res://Scripts/Menus/WGOptionsMenu.gd
+::res://Scenes/::1681643474
+::res://Scenes/InfoPanel/::1683791079
+build_panel.tscn::PackedScene::7753348598183443643::1683791079::0::1::::<><>::res://Scripts/Panels/build_panel.gd
+counter_bar.tscn::PackedScene::996814348677700520::1683791079::0::1::::<><>::res://Scripts/Counter Bar/Energy.gd<>res://Scripts/Counter Bar/Oxygen.gd<>res://Scripts/Counter Bar/Food.gd
+facilities.tscn::PackedScene::2997582880528928000::1683791079::0::1::::<><>::
+header.tscn::PackedScene::2187835332475633226::1683791079::0::1::::<><>::
+InfoPanel.tscn::PackedScene::5380787429883914238::1683791079::0::1::::<><>::uid://6f2lfqxhruis<>uid://biyb0toe50nmm
+::res://Scenes/World Generation/::1683791079
+CanvasLayer.gd::GDScript::-1::1683787476::0::1::::<>CanvasLayer<>::
+World Generation.tscn::PackedScene::2930526580369111296::1683791079::0::1::::<><>::res://Scripts/World.gd<>res://Scenes/World Generation/CanvasLayer.gd<>res://Scripts/Camera2D.gd<>uid://og4nfak4a8pw<>uid://ciwq1u7iktiiw<>uid://dip1rvsm35qy2<>uid://barbc8iykmbx4<>res://Scripts/Build_preview.gd
+world_generation.tscn::PackedScene::2421581140825970735::1683791079::0::1::::<><>::uid://bf7g88qg60qsf<>res://Scripts/World Generation/TileMap.gd<>uid://ccxncict6cq11
+::res://Scripts/::1683787642
+Build_preview.gd::GDScript::-1::1683665269::0::1::::<>CanvasLayer<>::
+Camera2D.gd::GDScript::-1::1683787642::0::1::::<>Camera2D<>::
+World.gd::GDScript::-1::1683787547::0::1::::<>Node2D<>::
+::res://Scripts/Counter Bar/::1682914735
+Energy.gd::GDScript::-1::1682914735::0::1::::<>Label<>::
+Food.gd::GDScript::-1::1682914735::0::1::::<>Label<>::
+Oxygen.gd::GDScript::-1::1682914735::0::1::::<>Label<>::
+::res://Scripts/Menus/::1682914735
+WGOptionsMenu.gd::GDScript::-1::1682914735::0::1::::<>Control<>::
+::res://Scripts/Panels/::1682923002
+build_panel.gd::GDScript::-1::1682923002::0::1::::<>PanelContainer<>::
+construct_btn.gd::GDScript::-1::1682914735::0::1::::<>Button<>::
+::res://Scripts/World Generation/::1683643557
+TileMap.gd::GDScript::-1::1683643557::0::1::::<>TileMap<>::
