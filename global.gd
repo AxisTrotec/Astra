@@ -24,7 +24,6 @@ var armoury = []
 var hangar = []
 var research = []
 
-
 #Counters
 var energy_max
 var energy_current

@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var cur_energy = $"Camera2D/CanvasLayer/Counter Bar/CurrentEnergy"
-@onready var cur_oxygen = $"Camera2D/CanvasLayer/Counter Bar/CurrentOxygen"
-@onready var cur_food = $"Camera2D/CanvasLayer/Counter Bar/CurrentFood"
+@onready var cur_energy = $"DescPanels/CanvasLayer/Counter Bar/CurrentEnergy"
+@onready var cur_oxygen = $"DescPanels/CanvasLayer/Counter Bar/CurrentOxygen"
+@onready var cur_food = $"DescPanels/CanvasLayer/Counter Bar/CurrentFood"
 
 @onready var facilities = $WorldGeneration/Facilities
 
@@ -40,7 +40,7 @@ func initiate_build_mode(type):
 	build_type = type
 	build_mode = true
 	
-	get_node("Build_preview").set_build_preview(type, get_global_mouse_position())
+	get_node("Build_preview").set_build_preview(get_global_mouse_position())
 
 func update_tower_preview():
 	var mouse_position = get_global_mouse_position()

@@ -2,22 +2,57 @@ extends Node2D
 
 var innerBuildValid = true
 
+var tier = 1
+
 func _ready():
-	
-	#If new game, add facilities to variables
-	if Global.new_game:
+	if tier == 1:
 		Global.hq = 1
-		
+
 		#Set energy to the default
 		Global.energy_max = 5000
 		Global.energy_current = 500
-		Global.energy_rate = 13
-		
+		Global.energy_rate = 250
+
 #		#Set food to the default
 		Global.food_max = 50000
 		Global.food_current = 10
 		Global.food_rate = 10
-#
+
+#		#Set food to the default
+		Global.oxygen_max = 0
+		Global.oxygen_current = 0
+		Global.oxygen_rate = 0
+	elif tier == 2:
+		Global.hq = 1
+
+		#Set energy to the default
+		Global.energy_max = 9000
+		Global.energy_current = 500
+		Global.energy_rate = 350
+
+#		#Set food to the default
+		Global.food_max = 50000
+		Global.food_current = 10
+		Global.food_rate = 10
+
+#		#Set food to the default
+		Global.oxygen_max = 0
+		Global.oxygen_current = 0
+		Global.oxygen_rate = 0
+		
+	elif tier == 3:
+		Global.hq = 1
+
+		#Set energy to the default
+		Global.energy_max = 11000
+		Global.energy_current = 500
+		Global.energy_rate = 450
+
+#		#Set food to the default
+		Global.food_max = 50000
+		Global.food_current = 10
+		Global.food_rate = 10
+
 #		#Set food to the default
 		Global.oxygen_max = 0
 		Global.oxygen_current = 0

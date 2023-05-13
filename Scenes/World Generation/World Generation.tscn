@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://bh0tlyncvy41i"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_csb2j"]
-[ext_resource type="Script" path="res://Scenes/World Generation/CanvasLayer.gd" id="2_3jpvs"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_ce041"]
 [ext_resource type="PackedScene" uid="uid://og4nfak4a8pw" path="res://Scenes/InfoPanel/counter_bar.tscn" id="2_esr7y"]
 [ext_resource type="PackedScene" uid="uid://ciwq1u7iktiiw" path="res://Scenes/InfoPanel/InfoPanel.tscn" id="2_pqhvx"]
+[ext_resource type="Script" path="res://Scripts/Panels/DescPanels.gd" id="5_51lud"]
 [ext_resource type="PackedScene" uid="uid://dip1rvsm35qy2" path="res://Scenes/InfoPanel/build_panel.tscn" id="5_iogo4"]
 [ext_resource type="PackedScene" uid="uid://barbc8iykmbx4" path="res://Scenes/World Generation/world_generation.tscn" id="6_dedit"]
 [ext_resource type="Script" path="res://Scripts/Build_preview.gd" id="9_arw4f"]
@@ -27,13 +27,12 @@ position_smoothing_speed = 100.0
 rotation_smoothing_enabled = true
 script = ExtResource("2_ce041")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-script = ExtResource("2_3jpvs")
+[node name="DescPanels" type="Node2D" parent="."]
+script = ExtResource("5_51lud")
 
-[node name="Counter Bar" parent="Camera2D/CanvasLayer" instance=ExtResource("2_esr7y")]
-metadata/_edit_use_anchors_ = true
+[node name="CanvasLayer" type="CanvasLayer" parent="DescPanels"]
 
-[node name="InfoPanel" parent="Camera2D" instance=ExtResource("2_pqhvx")]
+[node name="InfoPanel" parent="DescPanels/CanvasLayer" instance=ExtResource("2_pqhvx")]
 visible = false
 anchors_preset = 0
 anchor_right = 0.0
@@ -44,7 +43,10 @@ offset_right = 210.0
 offset_bottom = 270.0
 scale = Vector2(1, 1)
 
-[node name="MainPanel" parent="Camera2D" instance=ExtResource("5_iogo4")]
+[node name="MainPanel" parent="DescPanels/CanvasLayer" instance=ExtResource("5_iogo4")]
 visible = false
 offset_right = 84.0
 offset_bottom = 136.0
+
+[node name="Counter Bar" parent="DescPanels/CanvasLayer" instance=ExtResource("2_esr7y")]
+metadata/_edit_use_anchors_ = true
