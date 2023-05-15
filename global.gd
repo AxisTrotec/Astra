@@ -25,17 +25,17 @@ var hangar = []
 var research = []
 
 #Counters
-var energy_max
-var energy_current
-var energy_rate
+var energy_max = 0
+var energy_current = 0
+var energy_rate = 0
 
-var food_max
-var food_current
-var food_rate
+var food_max = 0
+var food_current = 0
+var food_rate = 0
 
-var oxygen_max
-var oxygen_current
-var oxygen_rate
+var oxygen_max = 0
+var oxygen_current = 0
+var oxygen_rate = 0
 
 func _ready():
 	facilities_init()

@@ -1,7 +1,7 @@
+ColorRect
 CanvasLayer
 Node2D
 SubViewport
-ColorRect
 CanvasModulate
 CollisionShape2D
 Area2D

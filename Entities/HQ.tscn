@@ -19,11 +19,25 @@ script = ExtResource("1_se6c5")
 [node name="AnimatableBody2D" type="CollisionShape2D" parent="InnerArea2D"]
 shape = SubResource("RectangleShape2D_5fsce")
 
+[node name="ColorRect" type="ColorRect" parent="InnerArea2D/AnimatableBody2D"]
+offset_left = -884.0
+offset_top = -884.0
+offset_right = 886.0
+offset_bottom = 882.0
+color = Color(0.0117647, 1, 1, 0.352941)
+
 [node name="OuterArea2D" type="Area2D" parent="."]
 
 [node name="AnimatableBody2D" type="CollisionShape2D" parent="OuterArea2D"]
 shape = SubResource("RectangleShape2D_e8bxo")
 debug_color = Color(0.788235, 0.431373, 0, 0.419608)
+
+[node name="ColorRect" type="ColorRect" parent="OuterArea2D/AnimatableBody2D"]
+offset_left = -999.0
+offset_top = -995.0
+offset_right = 1001.0
+offset_bottom = 1001.0
+color = Color(1, 0.360784, 0.172549, 0.313726)
 
 [connection signal="area_entered" from="InnerArea2D" to="." method="_on_inner_area_2d_area_entered"]
 [connection signal="area_exited" from="InnerArea2D" to="." method="_on_inner_area_2d_area_exited"]

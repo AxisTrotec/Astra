@@ -21,16 +21,23 @@ follow_viewport_enabled = true
 script = ExtResource("9_arw4f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.1, 0.1)
 position_smoothing_enabled = true
-position_smoothing_speed = 100.0
-rotation_smoothing_enabled = true
+position_smoothing_speed = 20.0
 script = ExtResource("2_ce041")
 
 [node name="DescPanels" type="Node2D" parent="."]
 script = ExtResource("5_51lud")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="DescPanels"]
+
+[node name="Counter Bar" parent="DescPanels/CanvasLayer" instance=ExtResource("2_esr7y")]
+metadata/_edit_use_anchors_ = true
+
+[node name="MainPanel" parent="DescPanels/CanvasLayer" instance=ExtResource("5_iogo4")]
+visible = false
+offset_right = 84.0
+offset_bottom = 136.0
 
 [node name="InfoPanel" parent="DescPanels/CanvasLayer" instance=ExtResource("2_pqhvx")]
 visible = false
@@ -42,11 +49,3 @@ offset_top = 0.0
 offset_right = 210.0
 offset_bottom = 270.0
 scale = Vector2(1, 1)
-
-[node name="MainPanel" parent="DescPanels/CanvasLayer" instance=ExtResource("5_iogo4")]
-visible = false
-offset_right = 84.0
-offset_bottom = 136.0
-
-[node name="Counter Bar" parent="DescPanels/CanvasLayer" instance=ExtResource("2_esr7y")]
-metadata/_edit_use_anchors_ = true

@@ -2,8 +2,8 @@ extends TileMap
 
 @onready var tilemap = $TileMap
 
-@export var width = 64
-@export var height = 64
+var width = 600
+var height = 600
 @onready var HQ = $"Facilities/HQ"
 
 var temperature = FastNoiseLite.new()
@@ -15,18 +15,15 @@ func _ready():
 	moisture.seed = randi()
 	altitude.seed = randi()
 
-#	if Global.world_size == 'small':
-#		print("small")
-#		width = 600
-#		height = 600
-#	elif Global.world_size == 'medium':
-#		print("medium")
-#		width = 1200
-#		height = 720
-#	elif Global.world_size == 'large':
-#		print("large")
-#		width = 2560
-#		height = 1440
+	if Global.world_size == 'small':
+		width = 600
+		height = 600
+	elif Global.world_size == 'medium':
+		width = 1200
+		height = 720
+	elif Global.world_size == 'large':
+		width = 2560
+		height = 1440
 		
 	generate_chunk(HQ.position)
 	

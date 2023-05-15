@@ -1,8 +1,9 @@
 extends CanvasLayer
 
-var preloadSprite = preload("res://Entities/HQ.tscn")
 
-func set_build_preview(mouse_pos):
+func set_build_preview(mouse_pos, type):
+	#var preloadSprite = load("res://Entities/" + type + ".tscn")
+	var preloadSprite = load("res://Entities/HQ.tscn")
 	var facility = preloadSprite.instantiate()
 	facility.set_name("DragPreview")
 	facility.position = mouse_pos

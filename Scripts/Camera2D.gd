@@ -5,6 +5,7 @@ var zoomSpeed = 0.05
 func _input(event):
 	if event is InputEventKey:
 		if event.is_pressed():
+			
 			#Movements
 			if Input.is_key_pressed(KEY_LEFT):
 				position.x -= 50
@@ -13,6 +14,15 @@ func _input(event):
 			if Input.is_key_pressed(KEY_RIGHT):
 				position.x += 50
 			if Input.is_key_pressed(KEY_DOWN):
+				position.y += 50
+			
+			if Input.is_key_pressed(KEY_A):
+				position.x -= 50
+			if Input.is_key_pressed(KEY_W):
+				position.y -= 50
+			if Input.is_key_pressed(KEY_D):
+				position.x += 50
+			if Input.is_key_pressed(KEY_S):
 				position.y += 50
 			
 			#Menus
@@ -26,5 +36,3 @@ func _input(event):
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_WHEEL_DOWN):
 			zoom.x -= zoomSpeed
 			zoom.y -= zoomSpeed
-
-
