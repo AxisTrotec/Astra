@@ -10,6 +10,9 @@ var list = ["provision", "sps", "lss", "residences", "medical", "armoury", "hang
 
 #Build verification
 var build_valid = true
+var build_init = false
+var build_mode = false
+var build_pos = Vector2(0,0)
 
 #Facilities
 var hq = 0

@@ -1,10 +1,11 @@
+CollisionShape2D
+Area2D
+Sprite2D
 ColorRect
 CanvasLayer
 Node2D
 SubViewport
 CanvasModulate
-CollisionShape2D
-Area2D
 StaticBody2D
 AnimatableBody2D
 TileMap
@@ -23,6 +24,5 @@ RichTextLabel
 ItemList
 OptionButton
 Camera2D
-Sprite2D
 CharacterBody2D
 RayCast2D

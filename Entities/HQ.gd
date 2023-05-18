@@ -57,20 +57,8 @@ func _input_event(viewport, event, shape_idx):
 func on_click():
 	print("Click")
 
-func _on_inner_area_2d_area_entered(area):
-	if innerBuildValid:
-		innerBuildValid = false
+func _on_build_area_1_area_entered(area):
+	print(self.position)
 
-func _on_inner_area_2d_area_exited(area):
-	if !innerBuildValid:
-		innerBuildValid = true
-	
-func _on_outer_area_2d_area_entered(area):
-	if !innerBuildValid:
-		Global.build_valid = false
-	else:
-		Global.build_valid = true
-
-func _on_outer_area_2d_area_exited(area):
-	if !Global.build_valid:
-		Global.build_valid = true
+func _on_build_area_2_area_entered(area):
+	print(area.get_name())

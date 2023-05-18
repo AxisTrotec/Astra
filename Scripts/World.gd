@@ -54,6 +54,7 @@ func _process(delta):
 func initiate_build_mode(type):
 	build_type = type
 	build_mode = true
+	Global.build_mode = true
 	
 	get_node("Build_preview").set_build_preview(get_global_mouse_position(), type)
 
@@ -72,7 +73,8 @@ func update_tower_preview():
 	
 func verify_and_build():
 	if Global.build_valid and build_mode:
-		var new_facility = load("res://Entities/HQ.tscn").instantiate()
+		#var new_facility = load("res://Entities/HQ.tscn").instantiate()
+		var new_facility = load("res://Scenes/Test.tscn").instantiate()
 		new_facility.position = build_location
 		map_node.get_node("Facilities").add_child(new_facility, true)
 		update_counter()
