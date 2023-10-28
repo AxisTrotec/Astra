@@ -13,6 +13,9 @@ var build_type
 var map_node
 
 func _ready():
+	for i in get_tree().get_nodes_in_group("facilities"):
+		i.connect("pressed",Callable(self,"initiate_build_mode").bind(i.get_name()))
+
 	if Global.new_game:
 		#Set energy to the default
 		Global.energy_current += 500
@@ -39,8 +42,6 @@ func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	
 	map_node = get_node("WorldGeneration")
-	for i in get_tree().get_nodes_in_group("facilities"):
-		i.pressed.connect(initiate_build_mode.bind(i.get_text()))
 
 func _input(event):
 	if event is InputEventMouseButton:

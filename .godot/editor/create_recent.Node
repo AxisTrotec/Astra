@@ -1,14 +1,14 @@
+Node2D
+TileMap
 CollisionShape2D
 Area2D
 Sprite2D
 ColorRect
 CanvasLayer
-Node2D
 SubViewport
 CanvasModulate
 StaticBody2D
 AnimatableBody2D
-TileMap
 Button
 Label
 HBoxContainer

@@ -1,23 +1,28 @@
 [gd_scene load_steps=6 format=3 uid="uid://barbc8iykmbx4"]
 
-[ext_resource type="Texture2D" uid="uid://bf7g88qg60qsf" path="res://Art Assets/Assets/Moon_1.jpg" id="1_iels0"]
 [ext_resource type="Script" path="res://Scripts/World Generation/TileMap.gd" id="2_m8k84"]
 [ext_resource type="PackedScene" uid="uid://ccxncict6cq11" path="res://Entities/HQ.tscn" id="3_nidvb"]
+[ext_resource type="Texture2D" uid="uid://cu1erip2jdqg5" path="res://Art Assets/Assets/Tiles.png" id="4_kurqj"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b4qke"]
-texture = ExtResource("1_iels0")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_khs0w"]
+texture = ExtResource("4_kurqj")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
 
 [sub_resource type="TileSet" id="1"]
 tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_b4qke")
+sources/0 = SubResource("TileSetAtlasSource_khs0w")
 
 [node name="WorldGeneration" type="TileMap"]
 tile_set = SubResource("1")
+cell_quadrant_size = 64
 format = 2
 script = ExtResource("2_m8k84")
 
 [node name="Facilities" type="Node2D" parent="."]
 
 [node name="HQ" parent="Facilities" instance=ExtResource("3_nidvb")]
+
+[node name="Obstacles" type="Node2D" parent="."]

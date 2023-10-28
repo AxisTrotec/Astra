@@ -1,6 +1,14 @@
-extends CanvasLayer
+extends TileMap
 
+var build_mode
 
+func _ready():
+	pass
+
+func _process(delta):
+	if build_mode:
+		update_tower_preview(get_global_mouse_position(), "#30fc03")
+		
 func set_build_preview(mouse_pos, type):
 	#var preloadSprite = load("res://Entities/" + type + ".tscn")
 	#var preloadSprite = load("res://Entities/HQ.tscn")

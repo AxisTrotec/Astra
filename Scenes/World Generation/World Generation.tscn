@@ -12,13 +12,12 @@
 [node name="World" type="Node2D"]
 script = ExtResource("1_csb2j")
 
+[node name="Build_preview" type="TileMap" parent="."]
+format = 2
+script = ExtResource("9_arw4f")
+
 [node name="WorldGeneration" parent="." instance=ExtResource("6_dedit")]
 position = Vector2(257, -6)
-
-[node name="Build_preview" type="CanvasLayer" parent="."]
-transform = Transform2D(1, 2.08165e-13, -2.08165e-13, 1, 0, 0)
-follow_viewport_enabled = true
-script = ExtResource("9_arw4f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)

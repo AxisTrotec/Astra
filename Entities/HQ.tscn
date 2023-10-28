@@ -1,34 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccxncict6cq11"]
+[gd_scene load_steps=3 format=3 uid="uid://ccxncict6cq11"]
 
 [ext_resource type="Texture2D" uid="uid://b4xj01hkkhswb" path="res://Art Assets/Assets/HQ.png" id="1_ldiky"]
 [ext_resource type="Script" path="res://Entities/HQ.gd" id="1_se6c5"]
-[ext_resource type="Texture2D" uid="uid://dvtwhyc53opmb" path="res://Art Assets/Assets/build_valid.png" id="3_rbokj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xoj3"]
-size = Vector2(1000, 1000)
 
 [node name="Sprite2D" type="Sprite2D"]
 top_level = true
 texture = ExtResource("1_ldiky")
 script = ExtResource("1_se6c5")
-
-[node name="BuildArea1" type="Area2D" parent="."]
-position = Vector2(-1501, -500)
-
-[node name="Sprite2D" type="Sprite2D" parent="BuildArea1"]
-texture = ExtResource("3_rbokj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildArea1"]
-shape = SubResource("RectangleShape2D_8xoj3")
-
-[node name="BuildArea2" type="Area2D" parent="."]
-position = Vector2(-1501, 501)
-
-[node name="Sprite2D" type="Sprite2D" parent="BuildArea2"]
-texture = ExtResource("3_rbokj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BuildArea2"]
-shape = SubResource("RectangleShape2D_8xoj3")
-
-[connection signal="area_entered" from="BuildArea1" to="." method="_on_build_area_1_area_entered"]
-[connection signal="area_entered" from="BuildArea2" to="." method="_on_build_area_2_area_entered"]
